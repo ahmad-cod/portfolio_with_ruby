@@ -1,0 +1,16 @@
+<div class="text-center">
+  <h1 class="text-4xl font-bold mb-4">Welcome to My Portfolio</h1>
+  <p class="text-lg mb-6">Hi, I'm Ahmad, a passionate Software Engineer. Explore my work, learn more about me, and feel free to get in touch!</p>
+  <a href="<%= about_path %>" class="btn btn-primary">Learn More About Me</a>
+
+  <div class="relative bg-black text-white h-96 flex items-center justify-center">
+  <!-- Background pattern -->
+  <div class="absolute inset-0 bg-grid bg-repeat bg-[length:30px_30px] opacity-10"></div>
+  
+  <!-- Main content -->
+  <div class="text-center z-10">
+    <h1 class="text-4xl font-bold mb-4">Hey, Let's work on cool projects together</h1>
+    <%= link_to "Contact me", contact_path, class: "bg-yellow-400 text-black px-6 py-3 rounded-full font-semibold hover:bg-yellow-500 transition duration-300 ease-in-out" %>
+  </div>
+</div>
+</div>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Portfolio</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    
+    <%= stylesheet_link_tag "https://cdn.simplecss.org/simple.css" %>
+    <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body>
+    <header class="container mx-auto px-5 my-8" >
+      <nav>
+          <ul class="flex justify-center align-center" >
+              <li><%= link_to 'Home', root_path %></li>
+              <li><%= link_to 'About', about_path %></li>
+              <li><%= link_to 'Works', works_path %></li>
+              <li><%= link_to 'Contact', contact_path %></li>
+          </ul>
+      </nav>
+    </header>
+
+    <div class="flash-notice mt-10" >
+      <% if flash[:notice] %>
+        <p class="border border-green-100 text-white" ><%= flash[:notice] %></p>
+      <% end %>
+    </div>
+    <main class="container mx-auto mt-28 px-5 flex flex-col">
+      <%= yield %>
+    </main>
+    
+    <footer class="container mx-auto px-5 my-10" >
+      <p>© 2024 Ahmad Aroyehun. Built with ))</p>
+    </footer>
+  </body>
+</html>
